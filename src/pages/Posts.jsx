@@ -50,28 +50,7 @@ function Posts() {
   }
 
   return (
-    <div className="App">
-      {/* Класс компонентов инкремента и дикремента (ИСПОЛЬЗУЕТСЯ РЕДКО)
-      <ClassCounter/>
-      Отдельный функциональный компонента инкремента и дикремента
-      <Counter/>  */}
-
-      {/* Отдельный компонент, на который мы можем оперировать
-      Но статичное название и описание
-      <PostItem/> */}
-
-      {/* Аргументы компонента pros 
-      <PostItem post={{id: 1, title: 'Javascript', body: 'Description'}} /> */}
-
-      {/* <h1 style={{textAlign: 'center'}}>
-        Список постов
-      </h1>
-      {posts.map((post) =>
-        <div>
-          <PostItem post={post} key={post.id} />
-        </div>
-      )} */}
-      
+    <div className="App">      
       <MyButton onClick={fetchPosts}>
         Get Posts
       </MyButton>
@@ -97,7 +76,7 @@ function Posts() {
         <div style={{display: 'flex', justifyContent: 'center', marginTop: 50}}>
           <Loader/>
         </div>
-        : <PostList remove={removePost} posts={sortedAndSearchPosts} title="Посты про девочек" />
+        : <PostList remove={removePost} posts={sortedAndSearchPosts} title="Новостные посты" />
       }
       <Pagination 
         page={page} 

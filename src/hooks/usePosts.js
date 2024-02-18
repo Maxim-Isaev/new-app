@@ -1,9 +1,7 @@
 import { useMemo } from "react";
 
 export const useSortedPosts = (posts, sort) => {
-    //Оптимизированный алгоритм сортировки (с помощью кэша)
     const sortedPosts = useMemo(() => {
-        console.log('ОТРАБОТАЛА ЭТА СРАНАЯ ФУНКЦИЯ')
         if(sort) {
             return [...posts].sort((a,b) => a[sort].localeCompare(b[sort]))
         }
